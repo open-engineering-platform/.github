@@ -1,4 +1,4 @@
-Open Engineering Platform
+# Open Engineering Platform
 
 Shared foundations for engineering systems, runtime platforms, digital worlds, skills, activities, agents, and missions.
 
@@ -32,7 +32,7 @@ A capability that is useful to multiple systems belongs in Open Engineering Plat
 ⸻
 
 Platform Architecture
-
+```
 Applications
 │
 ├── Code Smell Detective
@@ -58,7 +58,7 @@ Domain Platforms
 │
 ▼
 Open Engineering Platform
-
+```
 ⸻
 
 Platform Building Blocks
