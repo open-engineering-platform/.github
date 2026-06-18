@@ -1,14 +1,14 @@
 # Open Engineering Platform
 
-Shared foundations for engineering systems, runtime platforms, digital worlds, skills, activities, agents, and missions.
+Open standards, APIs, contracts, CRDs, and SDKs for engineering worlds, activities, skills, missions, agents, detectives, and control planes.
 
 ⸻
 
 Vision
 
-Open Engineering Platform (OEP) provides the common building blocks used by engineering-focused platforms, applications, games, simulations, agents, and operating systems.
+Open Engineering Platform (OEP) provides the shared foundation for building Kubernetes-native engineering platforms.
 
-Its purpose is to establish open standards and reusable components that enable interoperability between systems such as:
+OEP defines the common language used by systems such as:
 
 * Detective Operating System
 * Agility Game
@@ -17,17 +17,19 @@ Its purpose is to establish open standards and reusable components that enable i
 * Repository Activities
 * Future engineering platforms
 
-Rather than creating another monolithic framework, Open Engineering Platform focuses on defining common contracts, protocols, SDKs, and architectural patterns that allow independently developed systems to work together.
+OEP does not execute missions.
+
+OEP defines the APIs, contracts, schemas, and Kubernetes resources that make mission execution possible.
 
 ⸻
 
 Core Principle
 
-Build once.
+Define once.
 
-Reuse everywhere.
+Implement everywhere.
 
-A capability that is useful to multiple systems belongs in Open Engineering Platform.
+A concept shared by multiple platforms belongs in Open Engineering Platform.
 
 ⸻
 
@@ -61,11 +63,46 @@ Open Engineering Platform
 ```
 ⸻
 
-Platform Building Blocks
+Kubernetes Native by Design
+
+Open Engineering Platform adopts Kubernetes as its primary platform abstraction.
+
+Core concepts are represented as Kubernetes resources.
+
+Examples:
+
+kind: World
+kind: Skill
+kind: Activity
+kind: Mission
+kind: Detective
+kind: Detector
+kind: CaseFile
+
+These resources form the API surface of the platform.
+
+⸻
+
+Crossplane First
+
+Open Engineering Platform embraces Crossplane from the beginning.
+
+Crossplane enables the platform to define:
+
+* Custom Resources
+* Compositions
+* Control Planes
+* Declarative APIs
+
+The platform is designed around reconciliation rather than orchestration.
+
+⸻
+
+Core Concepts
 
 Worlds
 
-Worlds model environments in which agents, detectives, players, and systems operate.
+Worlds model environments.
 
 Examples:
 
@@ -74,7 +111,6 @@ Examples:
 * Kubernetes World
 * Terraform World
 * Azure World
-* Story World
 
 ⸻
 
@@ -88,48 +124,61 @@ Examples:
 * Code Navigation
 * Dependency Analysis
 * Reporting
-* Architecture Analysis
 
 ⸻
 
 Activities
 
-Activities model events and actions occurring within worlds.
+Activities model events occurring within worlds.
 
 Examples:
 
 * Commit Pushed
 * Pull Request Opened
 * Pull Request Merged
-* Issue Created
 * Release Published
-* Workflow Failed
 
 ⸻
 
 Missions
 
-Missions describe goals to be achieved.
+Missions describe goals.
 
 Examples:
 
 * Analyze Repository
-* Investigate Pull Request
-* Review Architecture
+* Review Pull Request
 * Validate Deployment
 
 ⸻
 
-Agents
+Detectives
 
-Agents execute missions using skills within worlds.
+Detectives investigate missions.
 
 Examples:
 
-* Detectives
-* Players
-* AI Agents
-* Digital Employees
+* Code Smell Detective
+* Architecture Detective
+* Dependency Detective
+
+⸻
+
+Detectors
+
+Detectors generate evidence.
+
+Examples:
+
+* God Object Detector
+* Dependency Detector
+* Security Detector
+
+⸻
+
+Case Files
+
+Case Files contain investigation results.
 
 ⸻
 
@@ -138,18 +187,11 @@ Repositories
 Foundation
 
 * contracts
-* events
+* crds
+* schemas
 * sdk-kotlin
 * sdk-python
 * architecture
-
-Future
-
-* missions
-* worlds
-* skills
-* activities
-* agents
 
 ⸻
 
@@ -157,71 +199,62 @@ Technology Strategy
 
 Kotlin Multiplatform
 
-Primary implementation language for:
+Primary platform language.
+
+Used for:
 
 * Contracts
 * SDKs
+* Controllers
 * Runtime integrations
 * Shared models
-
-Supported targets:
-
-* JVM
-* Linux
-* macOS
-* Windows
-* JavaScript
-* iOS
 
 ⸻
 
 Python
 
-Primary implementation language for:
+Primary analysis language.
 
-* Analysis engines
-* AI integrations
+Used for:
+
 * Detectors
-* Experimental capabilities
+* AI integrations
+* Experimental analysis engines
 
 ⸻
 
 Kubernetes
 
-Primary runtime environment for production deployments.
+Primary runtime platform.
+
+⸻
+
+Crossplane
+
+Primary control plane framework.
 
 ⸻
 
 Relationship to Detective Operating System
 
-Detective Operating System uses Open Engineering Platform as its foundation.
+Detective Operating System is a Kubernetes-native control plane built on Open Engineering Platform.
 
-Open Engineering Platform does not contain detectives.
-
-It contains the contracts and standards that detectives depend on.
+DOS implements the APIs defined by OEP.
 
 ⸻
 
 Relationship to Agility Game
 
-Agility Game uses Open Engineering Platform as its foundation.
+Agility Game is a gameplay platform built on Open Engineering Platform.
 
-Open Engineering Platform does not contain gameplay mechanics.
-
-It contains the contracts and standards that gameplay systems depend on.
+Agility Game consumes the same APIs while interpreting them through game mechanics.
 
 ⸻
 
 Long-Term Goal
 
-Create an open ecosystem of interoperable engineering platforms that share common foundations while remaining independently evolvable.
+Create an ecosystem of interoperable engineering platforms built upon a shared set of Kubernetes-native APIs and contracts.
 
-⸻
+The goal is not a single platform.
 
-License
-
-Open source.
-
-Community driven.
-
-Built for reuse.
+The goal is a shared language that allows many platforms to evolve independently while remaining compatible.
