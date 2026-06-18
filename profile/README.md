@@ -70,7 +70,7 @@ Open Engineering Platform adopts Kubernetes as its primary platform abstraction.
 Core concepts are represented as Kubernetes resources.
 
 Examples:
-
+```
 kind: World
 kind: Skill
 kind: Activity
@@ -78,7 +78,7 @@ kind: Mission
 kind: Detective
 kind: Detector
 kind: CaseFile
-
+```
 These resources form the API surface of the platform.
 
 ⸻
