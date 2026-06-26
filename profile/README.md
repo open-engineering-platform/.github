@@ -1,24 +1,30 @@
 # Open Engineering Platform
 
-An open platform for engineering investigations, games, performances, and intelligent characters.
+An open platform for engineering investigations, games, performances, intelligent characters, and reusable engineering capabilities.
 
-The Open Engineering Platform (OEP) provides a common architectural foundation for building engineering systems.
+The Open Engineering Platform (OEP) provides a common architectural foundation for building engineering systems that share a common language while remaining independently evolvable.
 
-Rather than creating isolated applications, OEP provides:
+Rather than building isolated applications, OEP provides:
 
 * a shared Kernel
 * a shared Ontology
-* multiple specialized Operating Systems
+* specialized Operating Systems
 * reusable Capsules
-* domain-specific Applications
+* composable Applications
+* a common Product Model
+* federated Systems of Record
 
-This allows every project to share a common language while specializing in its own runtime behavior.
+Together these form a platform where engineering, investigations, storytelling, performances, and intelligent characters can evolve as a coherent ecosystem.
 
 ⸻
 
 Architecture
+
+The Open Engineering Platform consists of several complementary layers.
 ```
 Open Engineering Platform
+│
+├── Architecture Models
 │
 ├── Kernel
 │
@@ -26,34 +32,37 @@ Open Engineering Platform
 │
 ├── Operating Systems
 │
+├── Capsules
+│
 └── Applications
 ```
-⸻
+Each layer answers a different architectural question.
 
-Kernel
+The Kernel defines execution.
 
-The Kernel contains the universal runtime capabilities shared by every application.
+The Ontology defines meaning.
 
-Examples include:
+Operating Systems specialize behavior.
 
-* Observation
-* Investigation
-* Execution
-* Evidence
-* Events
-* Messaging
-* Workflow
-* Memory
-* Reporting
-* Capsules
+Capsules provide reusable capabilities.
 
-The Kernel intentionally contains only platform primitives.
+Applications deliver end-user value.
+
+The Architecture Models connect all of these through common planning and governance.
 
 ⸻
 
-Ontology
+Three Complementary Architecture Models
 
-The Ontology defines the common language spoken throughout the platform.
+The Open Engineering Platform intentionally separates three complementary architectural models.
+
+Each model answers a different question.
+
+Together they provide a complete foundation for designing, building, evolving, governing, and operating engineering systems.
+
+1. Ontology Model — What exists?
+
+The Ontology defines the shared vocabulary of the platform.
 
 Examples include:
 
@@ -69,186 +78,125 @@ Examples include:
 * Capability
 * Relationship
 
-Every operating system interprets these concepts according to its own domain while preserving interoperability.
+Every Operating System interprets these concepts according to its own domain while preserving interoperability.
+
+The Ontology provides semantic consistency across the entire platform.
 
 ⸻
 
-Operating Systems
+2. Product Model — How does it evolve?
 
-Operating Systems specialize the Kernel for different domains.
-
-Detective Operating System (DOS)
-
-The Detective Operating System investigates.
-
-Core concepts include:
-
-* Investigations
-* Evidence
-* Findings
-* Hypotheses
-* Verdicts
-* Recommendations
-
-Applications include:
-
-* Code Smell Detectives
-* Repository Detectives
-* Architecture Detectives
-* Dependency Detectives
-* Cybersecurity Detectives
-* Documentation Detectives
-* Performance Detectives
-* Quality Detectives
-* Compliance Detectives
-
-⸻
-
-Game Operating System (GOS)
-
-The Game Operating System manages gameplay.
-
-Core concepts include:
-
-* Players
-* Boards
-* Spaces
-* Turns
-* Cards
-* Missions
-* Scores
-* Achievements
-
-Applications include:
-
-* Agility Games
-* Future educational and engineering games
-
-⸻
-
-Runner Operating System (ROS)
-
-The Runner Operating System orchestrates time-based execution.
-
-Core concepts include:
-
-* Timelines
-* Cues
-* Departments
-* States
-* Triggers
-* Transitions
-* Performances
-
-Applications include:
-
-* Show Runners
-* PKI Runners
-* Identity & Access Management Runners
-* Future engineering runners
-
-A conference presentation, software demonstration, deployment, or theatrical performance are all viewed as orchestrated performances.
-
-⸻
-
-Star Operating System (SOS)
-
-The Star Operating System gives physical or virtual characters the ability to perform.
-
-Core concepts include:
-
-* Characters
-* Motion
-* Voice
-* Emotion
-* Sensors
-* Actuators
-* Projection
-* Interaction
-
-Applications include:
-
-* PixStars
-* Snowy Owl
-* Anglepoise Lamp
-* Future animatronic and virtual characters
-
-⸻
-
-Applications
-
-Applications are concrete implementations built on one or more Operating Systems.
-
-Examples include:
+The Product Model describes how ideas become working software.
 ```
-Detective Operating System
-    ├── Code Smell Detectives
-    ├── Repository Detectives
-    ├── Architecture Detectives
-    └── ...
-Game Operating System
-    └── Agility Games
-Runner Operating System
-    ├── Show Runners
-    ├── PKI Runners
-    ├── IAM Runners
-    └── ...
-Star Operating System
-    ├── PixStars
-    ├── Snowy Owl
-    └── ...
+Portfolio
+│
+└── Product
+    │
+    ├── Vision
+    ├── Objectives
+    ├── Roadmap
+    ├── Releases
+    ├── Epics
+    ├── Features
+    ├── Stories
+    └── Tasks
 ```
-Applications may combine multiple operating systems.
+Every Solution, Capsule, Character, and Operating System evolves through this shared planning model.
 
+The Product Model is independent of implementation technology.
+
+⸻
+
+3. Systems of Record Model — Where is the truth maintained?
+
+The platform deliberately distributes responsibility across specialized systems.
+
+Each system owns one concern exceptionally well.
+```
+System	Responsibility
+Craft.io	Product Management
+GitHub	Source Code & Engineering
+Backstage	Software Catalog
+Detective Operating System	Engineering Evidence
+Kubernetes	Runtime
+Crossplane	Infrastructure Provisioning
+Identity & Access Management Runners	Identity
+Documentation	Knowledge
+MCP	AI Context Exchange
+```
+Rather than centralizing all information into one platform, the Open Engineering Platform federates specialized Systems of Record around a common Ontology and Product Model.
+
+⸻
+
+How the Three Models Work Together
+```
+                Open Engineering Platform
+                    Ontology Model
+                 (What things are)
+                          │
+                          ▼
+                   Product Model
+          (How things are planned)
+                          │
+                          ▼
+               Systems of Record
+        (Where authoritative information lives)
+                          │
+                          ▼
+                 Engineering Reality
+```
 For example:
 
-* A Code Smell Detective investigates software using the Detective Operating System while appearing as an animated character through the Star Operating System.
-* PixStars performs through the Star Operating System while being orchestrated by the Runner Operating System.
-* A PKI Runner presents a security demonstration using the Runner Operating System and may incorporate animated characters from the Star Operating System.
+* The Ontology defines what a Character, Capsule, Runner, Detective, or Investigation is.
+* The Product Model defines how those concepts evolve through MVPs, Releases, Features, and Stories.
+* The Systems of Record define where authoritative information is maintained, such as Craft.io for planning, GitHub for engineering, Backstage for software catalog information, and Detective Operating System for engineering evidence.
+
+Separating these concerns keeps the platform modular, extensible, and technology-independent.
 
 ⸻
 
-Capsules
+Kernel 
 
-Capsules provide reusable domain capabilities that can be plugged into any operating system.
+The Kernel contains the universal runtime capabilities shared by every application.
+
+It intentionally contains only platform primitives.
 
 Examples include:
 
-* Characters
-* Systems Thinking
-* Storytelling
-* Robotics
-* Voice
-* Vision
+* Observation
+* Investigation
+* Execution
+* Evidence
+* Events
+* Messaging
+* Workflow
 * Memory
-* AI
-* Simulation
+* Reporting
+* Capsule Management
 
-Capsules extend platform capabilities without changing the Kernel.
-
-⸻
-
-Design Principles
-
-The Open Engineering Platform follows several core principles:
-
-* Shared vocabulary through Ontology
-* Shared execution through the Kernel
-* Specialization through Operating Systems
-* Reuse through Capsules
-* Composition over duplication
-* Loose coupling
-* Open by design
-* Cloud-native architecture
-* Kubernetes-first deployment
-* Backstage-native engineering experience
+Every Operating System extends the Kernel without modifying its fundamental behavior.
 
 ⸻
 
-Vision
+Ontology
 
-The Open Engineering Platform is evolving into a platform where software engineering, systems thinking, investigations, games, performances, and intelligent characters all share the same architectural foundation.
+The Ontology provides the common language spoken throughout the platform.
 
-Rather than building isolated solutions, we build reusable operating systems that speak a common language, enabling applications to collaborate, evolve, and compose naturally.
+Examples include:
 
-Together, they form an open ecosystem for engineering.
+* Character
+* Story
+* Journey
+* Mission
+* Investigation
+* Space
+* Scene
+* System
+* Finding
+* Capability
+* Relationship
+
+This common vocabulary enables interoperability across products while allowing every Operating System to specialize these concepts for its own domain.
+
+⸻
+
