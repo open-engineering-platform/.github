@@ -55,15 +55,19 @@ The Architecture Models connect all of these through common planning and governa
 
 ⸻
 
-Three Complementary Architecture Models
+Four Complementary Architecture Dimensions
 
-The Open Engineering Platform intentionally separates three complementary architectural models.
+The Open Engineering Platform intentionally separates four complementary architectural dimensions.
 
-Each model answers a different question.
+Each dimension answers a different architectural question.
+
+Together they provide a complete foundation for designing, planning, implementing, operating, and evolving engineering systems.
+
+Each dimension answers a different question.
 
 Together they provide a complete foundation for designing, building, evolving, governing, and operating engineering systems.
 
-1. Ontology Model — What exists?
+1. Ontology Dimension — What exists?
 
 The Ontology defines the shared vocabulary of the platform.
 
@@ -87,9 +91,9 @@ The Ontology provides semantic consistency across the entire platform.
 
 ⸻
 
-2. Product Model — How does it evolve?
+2. Product Dimension — How does it evolve?
 
-The Product Model describes how ideas become working software.
+The Product Dimension describes how ideas become working software.
 ```
 Portfolio
 │
@@ -106,11 +110,11 @@ Portfolio
 ```
 Every Solution, Capsule, Character, and Operating System evolves through this shared planning model.
 
-The Product Model is independent of implementation technology.
+The Product Dimension is independent of implementation technology.
 
 ⸻
 
-3. Systems of Record Model — Where is the truth maintained?
+3. Systems of Record Dimension — Where is the truth maintained?
 
 The platform deliberately distributes responsibility across specialized systems.
 
@@ -127,18 +131,18 @@ Identity & Access Management Runners	Identity
 Documentation	Knowledge
 MCP	AI Context Exchange
 ```
-Rather than centralizing all information into one platform, the Open Engineering Platform federates specialized Systems of Record around a common Ontology and Product Model.
+Rather than centralizing all information into one platform, the Open Engineering Platform federates specialized Systems of Record around a common Ontology and Product Dimension.
 
 ⸻
 
-How the Three Models Work Together
+How the Four Dimensions Work Together
 ```
                 Open Engineering Platform
                     Ontology Model
                  (What things are)
                           │
                           ▼
-                   Product Model
+                   Product Dimension
           (How things are planned)
                           │
                           ▼
@@ -151,7 +155,7 @@ How the Three Models Work Together
 For example:
 
 * The Ontology defines what a Character, Capsule, Runner, Detective, or Investigation is.
-* The Product Model defines how those concepts evolve through MVPs, Releases, Features, and Stories.
+* The Product Dimension defines how those concepts evolve through MVPs, Releases, Features, and Stories.
 * The Systems of Record define where authoritative information is maintained, such as Craft.io for planning, GitHub for engineering, Backstage for software catalog information, and Detective Operating System for engineering evidence.
 
 Separating these concerns keeps the platform modular, extensible, and technology-independent.
