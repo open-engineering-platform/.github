@@ -34,7 +34,11 @@ Open Engineering Platform
 │
 ├── Capsules
 │
-└── Applications
+├── AI Assistants
+│
+├── Applications
+│
+└── Systems of Record
 ```
 Each layer answers a different architectural question.
 
