@@ -25,19 +25,18 @@ The Open Engineering Platform consists of several complementary layers.
 Open Engineering Platform
 │
 ├── Architecture Models
+│   │
+│   ├── Ontology Model
+│   ├── Product Model
+│   ├── Systems of Record Model
+│   └── Runtime Architecture
 │
 ├── Kernel
-│
 ├── Ontology
-│
 ├── Operating Systems
-│
 ├── Capsules
-│
 ├── AI Assistants
-│
 ├── Applications
-│
 └── Systems of Record
 ```
 Each layer answers a different architectural question.
